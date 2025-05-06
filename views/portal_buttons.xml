@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+  <!-- Add “Traveler Access” and “Ship with a Traveler” buttons -->
+  <template id="portal_buttons" name="MashiJai Portal Sidebar Buttons" inherit_id="portal.portal_sidebar" priority="20">
+    <!-- target the container that holds the sidebar widgets -->
+    <xpath expr="//div[contains(@class, 'o_portal_sidebar')]" position="inside">
+      <div class="d-flex flex-column mb-4">
+        <!-- Button 1: Traveler dashboard -->
+        <a href="/my/shipping/dashboard"
+           class="btn btn-primary mb-2"
+           role="button">
+          Traveler Access
+        </a>
+        <!-- Button 2: Customer shipping search -->
+        <a href="/shipping/search"
+           class="btn btn-secondary"
+           role="button">
+          Ship with a Traveler
+        </a>
+      </div>
+    </xpath>
+  </template>
+  </data>
+</odoo>

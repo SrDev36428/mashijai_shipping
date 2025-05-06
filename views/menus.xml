@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <!-- Window actions -->
+    <record id="action_mashijai_shipping_trip" model="ir.actions.act_window">
+      <field name="name">Trips</field>
+      <field name="res_model">mashijai.shipping.trip</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+          Create and manage traveler trips.
+        </p>
+      </field>
+    </record>
+
+    <record id="action_mashijai_shipping_booking" model="ir.actions.act_window">
+      <field name="name">Bookings</field>
+      <field name="res_model">mashijai.shipping.booking</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+          Manage all shipping bookings.
+        </p>
+      </field>
+    </record>
+  
+    <!-- Main “MashiJai Shipping” menu -->
+    <menuitem id="menu_mashijai_operations" name="MashiJai Shipping" sequence="10"/>
+
+    <!-- Sub-menus -->
+    <menuitem id="menu_mashijai_trips" name="Trips"
+              parent="menu_mashijai_operations"
+              action="action_mashijai_shipping_trip"
+              sequence="15"/>
+
+    <menuitem id="menu_mashijai_bookings" name="Bookings"
+              parent="menu_mashijai_operations"
+              action="action_mashijai_shipping_booking"
+              sequence="20"/>
+  
+  </data>
+</odoo>

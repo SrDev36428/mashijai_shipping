@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <template id="portal_shipping_dashboard" inherit_id="portal.portal_layout"
+              name="MashiJai Shipping – Dashboard">
+      <xpath expr="//div[contains(@class, 'o_portal_content')]" position="replace">
+        <div t-attf-class="'o_portal_content col-12 col-lg-8 mb-5'">
+          <h2 class="mb-4">Shipping Dashboard</h2>
+          <div class="row mb-4">
+            <div class="col">
+              <a href="/my/shipping/traveler" class="btn btn-primary">
+                Traveler Access
+              </a>
+            </div>
+            <div class="col">
+              <a href="/my/shipping/customer" class="btn btn-secondary">
+                Ship with a Traveler
+              </a>
+            </div>
+          </div>
+          <t t-if="trips">
+            <h3>My Trips</h3>
+            <ul class="list-group mb-4">
+              <t t-foreach="trips" t-as="trip">
+                <li class="list-group-item">
+                  <t t-esc="trip.departure_city"/> → <t t-esc="trip.destination_city"/>
+                  (<t t-esc="trip.remaining_kg"/> kg remaining)
+                  <a t-att-href="'/my/shipping/trip/%s/requests' % trip.id"
+                     class="btn btn-link btn-sm">
+                    Manage
+                  </a>
+                </li>
+              </t>
+            </ul>
+          </t>
+          <t t-if="bookings">
+            <h3>My Bookings</h3>
+            <ul class="list-group">
+              <t t-foreach="bookings" t-as="booking">
+                <li class="list-group-item">
+                  Trip 
+                  <t t-esc="booking.trip_id.departure_city"/> → 
+                  <t t-esc="booking.trip_id.destination_city"/>
+                  (<t t-esc="booking.weight"/> kg)
+                </li>
+              </t>
+            </ul>
+          </t>
+        </div>
+      </xpath>
+    </template>
+  </data>
+</odoo>
