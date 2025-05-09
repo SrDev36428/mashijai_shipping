@@ -109,10 +109,15 @@
                         <t t-if="rating.booking_reference"> - Booking <t t-esc="rating.booking_reference"/></t>
                       </span>
                     </div>
-                    <div t-if="rating.feedback" class="o_rating_feedback">
-                      <t t-esc="rating.feedback"/>
-                    </div>
-                    <div t-else class="text-muted fst-italic">No comment provided.</div>
+                    <t t-if="rating.feedback">
+                        <div class="o_rating_feedback">
+                            <t t-esc="rating.feedback"/>
+                        </div>
+                    </t>
+                    <t t-else="">
+                        <div class="text-muted fst-italic">No comment provided.</div>
+                    </t>
+
                   </div>
                 </t>
               </div>

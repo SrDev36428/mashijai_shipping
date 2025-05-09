@@ -58,6 +58,15 @@ class MashiJaiShippingTrip(models.Model):
         help="Number of ratings for the traveler"
     )
 
+    def _cron_send_pre_departure_reminders(self):
+        pass
+
+    def _cron_send_post_departure_followup(self):
+        pass
+
+    def _auto_complete_trips(self):
+        pass
+        
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:

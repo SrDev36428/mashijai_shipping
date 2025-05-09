@@ -3,7 +3,7 @@
   <data>
     <template id="portal_booking_form" inherit_id="portal.portal_layout"
               name="MashiJai Shipping – Book Trip">
-      <xpath expr="//div[contains(@class, 'o_portal_content')]" position="replace">
+      <xpath expr="//div[@id='wrap']//div//div[2]/div[1]" position="replace">
         <div t-attf-class="'o_portal_content col-12 col-lg-8 mb-5'">
           <h2>Book space on <t t-esc="trip.departure_city"/> → <t t-esc="trip.destination_city"/></h2>
           <form action="/my/shipping/bookings" method="post">
@@ -20,7 +20,7 @@
     </template>
   </data>
 </odoo>
-<odoo>
+<!-- <odoo>
   <data>
     <template id="portal_booking_form" inherit_id="portal.portal_layout"
               name="MashiJai Shipping – Book Trip">
@@ -40,4 +40,4 @@
       </xpath>
     </template>
   </data>
-</odoo>
+</odoo> -->

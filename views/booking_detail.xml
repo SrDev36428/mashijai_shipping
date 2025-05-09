@@ -24,8 +24,8 @@
             <button type="button" disabled="disabled" class="btn btn-secondary">Await Delivery</button>
           </t>
           <t t-if="booking.state == 'completed'">
-            <a href="/my/shipping/rate_user?booking_id=<t t-esc='booking.id'/>"
-               class="btn btn-primary">Rate User</a>
+            <a t-att-href="'/my/shipping/rate_user?booking_id=' + str(booking.id)"     
+                   class="btn btn-primary">Rate User</a>
           </t>
         </div>
       </t>

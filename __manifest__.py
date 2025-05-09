@@ -28,6 +28,7 @@ Features:
         'portal',
         'web',
         'website',
+        'rating',
     ],
     'data': [
         # Security

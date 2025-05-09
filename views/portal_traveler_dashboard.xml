@@ -2,7 +2,7 @@
 <odoo>
   <data>
     <!-- Traveler Dashboard page -->
-    <template id="portal_traveler_dashboard" name="MashiJai Shipping – Traveler Dashboard" website="True">
+    <template id="portal_traveler_dashboard" name="MashiJai Shipping – Traveler Dashboard">
       <t t-call="portal.portal_layout">
         <!-- tell the layout which tab we're on -->
         <t t-set="page_name" t-value="'traveler_dashboard'"/>

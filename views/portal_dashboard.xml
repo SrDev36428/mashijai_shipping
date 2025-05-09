@@ -3,7 +3,7 @@
   <data>
     <template id="portal_shipping_dashboard" inherit_id="portal.portal_layout"
               name="MashiJai Shipping – Dashboard">
-      <xpath expr="//div[contains(@class, 'o_portal_content')]" position="replace">
+      <xpath expr="//div[@id='wrap']//div//div[2]/div[1]" position="replace">
         <div t-attf-class="'o_portal_content col-12 col-lg-8 mb-5'">
           <h2 class="mb-4">Shipping Dashboard</h2>
           <div class="row mb-4">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
   <data>
-    <template id="search_results" name="Search Trips Results" website="True">
+    <template id="search_results" name="Search Trips Results">
       <t t-call="website.layout">
         <div id="wrap" class="oe_structure">
           <div class="container my-5">

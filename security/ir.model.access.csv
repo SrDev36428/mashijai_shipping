@@ -5,3 +5,4 @@ access_shipping_trip_manager,shipping.trip.manager,model_mashijai_shipping_trip,
 access_shipping_booking_user,shipping.booking.user,model_mashijai_shipping_booking,group_mashijai_user,1,1,1,0
 access_shipping_booking_traveler,shipping.booking.traveler,model_mashijai_shipping_booking,group_mashijai_traveler,1,1,1,1
 access_shipping_booking_manager,shipping.booking.manager,model_mashijai_shipping_booking,group_mashijai_manager,1,1,1,1
+
